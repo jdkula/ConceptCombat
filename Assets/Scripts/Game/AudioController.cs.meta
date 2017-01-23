@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: aad5d059f1c5eac458ecc717381ebdec
+timeCreated: 1484873199
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - BattleMusic: {fileID: 8300000, guid: b2e4df32312b5564599ceb012a7db30e, type: 3}
+  - AmbientMusic: {fileID: 8300000, guid: 04ad1f5951001184ea6e8436eac9e2bd, type: 3}
+  - Source: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
