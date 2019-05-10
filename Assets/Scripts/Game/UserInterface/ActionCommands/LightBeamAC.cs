@@ -63,7 +63,7 @@ namespace Game.UserInterface.ActionCommands
             float width = GetComponent<RectTransform>().sizeDelta.x - Constants.ActionCommandPadding;
             float hieght = GetComponent<RectTransform>().sizeDelta.y - Constants.ActionCommandPadding -
                            GetComponentInChildren<Text>().gameObject.GetComponent<RectTransform>().sizeDelta.y;
-            _numLetters = rnd.Next(10,21);
+            _numLetters = rnd.Next(2,7);
             int rows = Mathf.CeilToInt((float) _numLetters / 5);
             float keyWidth = width / 5f;
             float keyHeight = hieght / rows;

@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="RiderRiderContentModelStore">
-    <excludedPaths />
+  <component name="ContentModelStore">
+    <e p="C:\Users\jonak\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jonak\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Concept Combat.-1657691892.00" t="ExcludeRecursive" />
+    <e p="C:\Users\jonak\Development\Unity\Concept Combat" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="Editor" t="Include">
+            <e p="JetBrains" t="Include">
+              <e p="RiderAssetPostprocessor.cs" t="Include" />
+              <e p="RiderPlugin.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Constants.cs" t="Include" />
+          <e p="Game" t="Include">
+            <e p="ActionCommand.cs" t="Include" />
+            <e p="Attack.cs" t="Include" />
+            <e p="Attacks" t="Include">
+              <e p="LightBeam.cs" t="Include" />
+              <e p="SideBump.cs" t="Include" />
+            </e>
+            <e p="AudioController.cs" t="Include" />
+            <e p="Block.cs" t="Include" />
+            <e p="CameraGroup.cs" t="Include" />
+            <e p="CameraHelper.cs" t="Include" />
+            <e p="DebugHelp.cs" t="Include" />
+            <e p="Direction.cs" t="Include" />
+            <e p="Door.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+            <e p="Entity.cs" t="Include" />
+            <e p="Floor.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="Platform.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
+            <e p="Skull.cs" t="Include" />
+            <e p="SuccessIndicator.cs" t="Include" />
+            <e p="UserInterface" t="Include">
+              <e p="ActionCommands" t="Include">
+                <e p="BumpSideAC.cs" t="Include" />
+                <e p="LightBeamAC.cs" t="Include" />
+              </e>
+              <e p="BattleMenus" t="Include">
+                <e p="AttackInfoMenu.cs" t="Include" />
+                <e p="AttackMenu.cs" t="Include" />
+                <e p="RunMenu.cs" t="Include" />
+              </e>
+              <e p="EnemyUserInterface.cs" t="Include" />
+              <e p="HUD.cs" t="Include" />
+              <e p="PlayerUserInterface.cs" t="Include" />
+              <e p="UserInterface.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Menu" t="Include">
+            <e p="BackToMenu.cs" t="Include" />
+            <e p="PlayAction.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Concept Combat.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
   </component>
 </project>

@@ -99,7 +99,7 @@ namespace Game
         public override void Wake()
         {
             GetComponent<BoxCollider>().enabled = true;
-            GetComponent<Rigidbody>().WakeUp();
+            Rb.WakeUp();
             Rb.velocity = _pausedVelocity;
             _pausedVelocity = Vector3.zero;
         }

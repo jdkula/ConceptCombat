@@ -15,7 +15,7 @@ namespace Game
 
         protected override void OnDestroy()
         {
-            EnemyList = new ArrayList();
+            EnemyList.Remove(gameObject);
         }
 
         public static void Freeze(GameObject initiator)
