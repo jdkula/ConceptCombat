@@ -4,8 +4,15 @@ using UnityEngine;
 
 namespace Game
 {
+    /// <summary>
+    /// Represents an individual "Action Command" -- when an
+    /// action is taken in a battle, many actions require an
+    /// action command to be performed.
+    /// </summary>
     public abstract class ActionCommand : MonoBehaviour
     {
+        public abstract void Update();
+
         /// <summary>
         /// Description of what the action command will require the user to do.
         /// </summary>
@@ -27,7 +34,7 @@ namespace Game
         protected float Success;
 
         /// <summary>
-        /// The attatched entity, which will recieve success data when this finishes.
+        /// The attached entity, which will receive success data when this finishes.
         /// </summary>
         protected Entity Attatched;
 
@@ -36,23 +43,19 @@ namespace Game
         /// </summary>
         protected Attack Atk;
 
-
         /// <summary>
         /// Shows the UI of the Action Command.
         /// </summary>
-        /// <param name="atkMenu">For hiding and showing the attack menu</param>
         /// <param name="attatched">The attacking Entity</param>
         public abstract void Show(Entity attatched);
-
-        public abstract void Update();
-
+        
         /// <summary>
         /// Sends success data and destroys this UI.
         /// </summary>
         public abstract IEnumerator SendAndDestroy();
 
         /// <summary>
-        /// Sets up the Attack
+        /// Connects this UI to the attack
         /// </summary>
         /// <param name="atk">The Attack</param>
         public void SetupAttack(Attack atk)

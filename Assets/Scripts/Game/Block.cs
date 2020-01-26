@@ -2,16 +2,9 @@
 
 namespace Game
 {
+    /// <summary>
+    /// An empty marker class for walls (blocks).
+    /// </summary>
     public class Block : MonoBehaviour {
-
-        // Use this for initialization
-        void Start () {
-		
-        }
-	
-        // Update is called once per frame
-        void Update () {
-		
-        }
     }
 }

@@ -4,6 +4,9 @@ using Random = System.Random;
 
 namespace Game
 {
+    /// <summary>
+    /// Represents the skull enemy, and their movement.
+    /// </summary>
     public class Skull : Enemy
     {
         private Random _rnd;
@@ -43,6 +46,7 @@ namespace Game
                             if (velZ == 0) velZ = -1;
                         }
                     }
+
                     if (xy == 1)
                     {
                         velZ = _rnd.Next(-1, 2);
@@ -52,6 +56,7 @@ namespace Game
                             if (velX == 0) velX = -1;
                         }
                     }
+
                     Vector3 newVel = new Vector3(velX, 0, velZ) * Constants.SkullSpeed * _rnd.Next(1, 11);
                     Rb.velocity = newVel;
                     _wait--;
@@ -61,9 +66,7 @@ namespace Game
                     _wait--;
                 }
             }
-            else
-            {
-            }
+
             base.Update();
         }
 
@@ -77,13 +80,13 @@ namespace Game
                     Ray ray = new Ray(Tf.position, Vector3.up);
                     RaycastHit hit;
                     Physics.Raycast(ray, out hit);
-                    Tf.position = Vector3.Lerp(Tf.position, hit.transform.position, Constants.LerpTransitionSpeed * Time.deltaTime);
+                    Tf.position = Vector3.Lerp(Tf.position, hit.transform.position,
+                        Constants.LerpTransitionSpeed * Time.deltaTime);
                     _wait = 120;
                 }
             }
             else
             {
-
             }
         }
 

@@ -1,13 +1,14 @@
 ﻿using Game.UserInterface;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace Game
 {
     public class Player : Entity
     {
         public Rigidbody Rb;
-        public CameraGroup CamGroup;
+        public CameraController camController;
 
         // Use this for initialization
         protected override void Start()

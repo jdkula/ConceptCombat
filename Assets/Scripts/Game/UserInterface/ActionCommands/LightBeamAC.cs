@@ -6,6 +6,7 @@ using Random = System.Random;
 
 namespace Game.UserInterface.ActionCommands
 {
+    
     public class LightBeamAC : ActionCommand
     {
         private bool _shown;
@@ -20,17 +21,6 @@ namespace Game.UserInterface.ActionCommands
         private float _timeLeft;
         private float _startTime;
         private bool _clockStopped;
-
-        private readonly string[] _greekLetters =
-            new[]
-            {
-                "α", "β", "δ",
-                "ε", "ζ", "η",
-                "ι", "κ", "λ",
-                "μ", "ν", "ο",
-                "π", "ρ", "σ",
-                "τ", "υ", "φ"
-            };
 
         private readonly string[] _englishEquivs =
             new[]
@@ -81,9 +71,9 @@ namespace Game.UserInterface.ActionCommands
                 rt.anchoredPosition = new Vector2(keyWidth / 2 + Constants.ActionCommandPadding + keyWidth * (i % 5),
                     keyHeight * rows / 2f - keyHeight / 2f - keyHeight * Mathf.FloorToInt(i / 5f));
 
-                int keyToPress = rnd.Next(0, _greekLetters.Length);
+                int keyToPress = rnd.Next(0, _englishEquivs.Length);
 
-                go.GetComponentInChildren<Text>().text = _greekLetters[keyToPress];
+                go.GetComponentInChildren<Text>().text = _englishEquivs[keyToPress];
 
                 _keys[i] = go;
                 _pressRequirements[i] = keyToPress;

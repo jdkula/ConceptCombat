@@ -2,6 +2,9 @@
 
 namespace Game.Attacks
 {
+    /// <summary>
+    /// Represents the enemy attack.
+    /// </summary>
     public class SideBump : Attack
     {
         protected new void Awake()
@@ -11,7 +14,7 @@ namespace Game.Attacks
             ActionCommandName = "Side Bump AC";
             Damage = 5;
             Accuracy = 1f;
-            Uses = Int32.MaxValue;
+            Uses = 100;
             base.Awake();
         }
     }

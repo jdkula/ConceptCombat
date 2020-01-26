@@ -2,6 +2,9 @@
 
 namespace Game
 {
+    /// <summary>
+    /// Fades between audio clips when changing scenes.
+    /// </summary>
     public class AudioController : MonoBehaviour
     {
         public AudioClip BattleMusic;

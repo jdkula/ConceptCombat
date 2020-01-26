@@ -30,12 +30,125 @@ namespace Game
         public float TileDimension;
         public Vector3 TileScale;
 
-        private CameraGroup _camGroup;
+        private CameraController _camController;
 
         private void Awake()
         {
             Application.targetFrameRate = 60;
             Instance = this;
+
+            _generateLevel();
+        }
+
+        void Start()
+        {
+            StartCoroutine(WaitCamera(_camController));
+        }
+
+        /// <summary>
+        /// Gives the user a sneak peak at the level, then begins following the player.
+        /// </summary>
+        private IEnumerator WaitCamera(CameraController camController)
+        {
+            yield return new WaitForSecondsRealtime(Constants.CameraOverviewTime);
+            camController.Following = true;
+        }
+
+        /// <summary>
+        /// Given an array of Vector3s representing the four corners
+        /// of the screen the camera can see, turns it into a square
+        /// by reducing the largest dimension, and returns it.
+        /// </summary>
+        public static Vector3[] Squarify(Vector3[] notSquare, CameraHelper cam)
+        {
+            float height = cam.GetFustrumHeight(cam.transform.position.y);
+            float width = cam.GetFustrumWidth(cam.transform.position.y);
+
+            if (Math.Abs(width - height) < 0.01)
+            {
+                return notSquare;
+            }
+
+            if (width > height)
+            {
+                float halfdiff = (width - height) / 2f;
+                return new[]
+                {
+                    new Vector3(notSquare[0].x - halfdiff, notSquare[0].y, notSquare[0].z),
+                    new Vector3(notSquare[1].x + halfdiff, notSquare[1].y, notSquare[1].z),
+                    new Vector3(notSquare[2].x + halfdiff, notSquare[2].y, notSquare[2].z),
+                    new Vector3(notSquare[3].x - halfdiff, notSquare[3].y, notSquare[3].z)
+                };
+            }
+            else
+            {
+                float halfdiff = (height - width) / 2f;
+                return new[]
+                {
+                    new Vector3(notSquare[0].x, notSquare[0].y, notSquare[0].z - halfdiff),
+                    new Vector3(notSquare[1].x, notSquare[1].y, notSquare[1].z - halfdiff),
+                    new Vector3(notSquare[2].x, notSquare[2].y, notSquare[2].z + halfdiff),
+                    new Vector3(notSquare[3].x, notSquare[3].y, notSquare[3].z + halfdiff)
+                };
+            }
+        }
+
+        private static Vector3 GetTransform(Vector3[] workArea, float tileDimensions, int x, int z)
+        {
+            Vector3 topLeft = new Vector3(workArea[1].x + tileDimensions / 2, workArea[1].y,
+                workArea[1].z - tileDimensions / 2);
+
+            return new Vector3(topLeft.x + tileDimensions * x, topLeft.y, topLeft.z - tileDimensions * z);
+        }
+
+        /// <summary>
+        /// Wins the game by touching the door
+        /// </summary>
+        public IEnumerator OnDoorTouch(GameObject door)
+        {
+            WinSound.Play();
+            door.GetComponent<Door>().Open();
+            yield return new WaitForSecondsRealtime(WinSound.clip.length);
+            SceneManager.LoadScene(0, LoadSceneMode.Single);
+        }
+
+        public void NextLevel(GameObject doorInstance)
+        {
+            StartCoroutine(OnDoorTouch(doorInstance));
+        }
+
+        public void EnterBattle(Entity player, Entity enemy)
+        {
+            player.BattlePositions();
+            enemy.BattlePositions();
+            player.Battle(enemy);
+            enemy.Battle(player);
+            EUI.Battle(enemy);
+            PUI.Battle(player);
+
+            _camController.Battle(player, enemy);
+
+            GetComponent<AudioController>().Battle();
+        }
+
+        public void ExitBattle(Entity player, Entity enemy)
+        {
+            Enemy.Unfreeze();
+            player.ExitBattle();
+            enemy.ExitBattle();
+            EUI.ExitBattle();
+            PUI.ExitBattle();
+            _camController.ExitBattle();
+            GetComponent<AudioController>().ExitBattle();
+        }
+
+        private void OnDestroy()
+        {
+            Instance = null;
+        }
+
+        private void _generateLevel()
+        {
             Random rgen = new Random();
 
             Vector3[] workArea = Squarify(Camera.GetFustrumBounds(Camera.transform.position.y), Camera);
@@ -57,7 +170,7 @@ namespace Game
                 for (int z = 0; z < tilesPerRow; z++)
                 {
                     bool isBlock = rgen.NextDouble() < Constants.BlockChance;
-                    GameObject toInstantiate =  isBlock ? BlockPrefab : FloorPrefab;
+                    GameObject toInstantiate = isBlock ? BlockPrefab : FloorPrefab;
                     if (z == 0 || x == 0 || x == tilesPerRow - 1 || z == tilesPerRow - 1)
                     {
                         toInstantiate = BlockPrefab;
@@ -71,7 +184,8 @@ namespace Game
                             currentExitPossibility++;
                         }
                     }
-                    if(!isBlock) entityPlacementPossibilities.Add(new[] {x, z});
+
+                    if (!isBlock) entityPlacementPossibilities.Add(new[] {x, z});
                     tiles[x, z] = Instantiate(toInstantiate, GetTransform(workArea, TileDimension, x, z),
                         FloorPrefab.transform.rotation);
                     tiles[x, z].transform.localScale = TileScale;
@@ -134,15 +248,15 @@ namespace Game
                 tiles[xDestroy, yDestroy] = floor;
             }
 
-            _camGroup = GameObject.Find("Cameras").GetComponent<CameraGroup>();
+            _camController = GameObject.Find("Cameras").GetComponent<CameraController>();
 
             int index = rgen.Next(0, entityPlacementPossibilities.Count);
             GameObject go = tiles[entityPlacementPossibilities[index][0], entityPlacementPossibilities[index][1]];
             Player = Instantiate(PlayerPrefab, go.transform.position,
                 PlayerPrefab.transform.rotation);
             Player.transform.localScale = TileScale;
-            _camGroup.Plyr = Player;
-            Player.GetComponent<Player>().CamGroup = _camGroup;
+            _camController.player = Player;
+            Player.GetComponent<Player>().camController = _camController;
             entityPlacementPossibilities.RemoveAt(index);
 
             for (int i = 0; i < Constants.EnemyLimit; i++)
@@ -156,109 +270,6 @@ namespace Game
                 Enemy.EnemyList.Add(newEnemy);
                 entityPlacementPossibilities.RemoveAt(index);
             }
-        }
-
-        // Use this for initialization
-        void Start()
-        {
-
-            StartCoroutine(WaitCamera(_camGroup));
-        }
-
-        private IEnumerator WaitCamera(CameraGroup camGroup)
-        {
-            yield return new WaitForSecondsRealtime(Constants.CameraOverviewTime);
-            camGroup.Following = true;
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        }
-
-        public static Vector3[] Squarify(Vector3[] notSquare, CameraHelper cam)
-        {
-            float height = cam.GetFustrumHeight(cam.transform.position.y);
-            float width = cam.GetFustrumWidth(cam.transform.position.y);
-
-            if (Math.Abs(width - height) < 0.01)
-            {
-                return notSquare;
-            }
-            if (width > height)
-            {
-                float halfdiff = (width - height) / 2f;
-                return new[]
-                {
-                    new Vector3(notSquare[0].x - halfdiff, notSquare[0].y, notSquare[0].z),
-                    new Vector3(notSquare[1].x + halfdiff, notSquare[1].y, notSquare[1].z),
-                    new Vector3(notSquare[2].x + halfdiff, notSquare[2].y, notSquare[2].z),
-                    new Vector3(notSquare[3].x - halfdiff, notSquare[3].y, notSquare[3].z)
-                };
-            }
-            else
-            {
-                float halfdiff = (height - width) / 2f;
-                return new[]
-                {
-                    new Vector3(notSquare[0].x, notSquare[0].y, notSquare[0].z - halfdiff),
-                    new Vector3(notSquare[1].x, notSquare[1].y, notSquare[1].z - halfdiff),
-                    new Vector3(notSquare[2].x, notSquare[2].y, notSquare[2].z + halfdiff),
-                    new Vector3(notSquare[3].x, notSquare[3].y, notSquare[3].z + halfdiff)
-                };
-            }
-        }
-
-        private static Vector3 GetTransform(Vector3[] workArea, float tileDimensions, int x, int z)
-        {
-            Vector3 topLeft = new Vector3(workArea[1].x + tileDimensions / 2, workArea[1].y,
-                workArea[1].z - tileDimensions / 2);
-
-            return new Vector3(topLeft.x + tileDimensions * x, topLeft.y, topLeft.z - tileDimensions * z);
-        }
-
-        public IEnumerator OnDoorTouch(GameObject door)
-        {
-            WinSound.Play();
-            door.GetComponent<Door>().Open();
-            yield return new WaitForSecondsRealtime(WinSound.clip.length);
-            print("Trying to load scene");
-            SceneManager.LoadScene(0, LoadSceneMode.Single);
-        }
-
-        public void NextLevel(GameObject doorInstance)
-        {
-            StartCoroutine(OnDoorTouch(doorInstance));
-        }
-
-        public void EnterBattle(Entity player, Entity enemy)
-        {
-            player.BattlePositions();
-            enemy.BattlePositions();
-            player.Battle(enemy);
-            enemy.Battle(player);
-            EUI.Battle(enemy);
-            PUI.Battle(player);
-
-            _camGroup.Battle(player, enemy);
-
-            GetComponent<AudioController>().Battle();
-        }
-
-        public void ExitBattle(Entity player, Entity enemy)
-        {
-            Enemy.Unfreeze();
-            player.ExitBattle();
-            enemy.ExitBattle();
-            EUI.ExitBattle();
-            PUI.ExitBattle();
-            _camGroup.ExitBattle();
-            GetComponent<AudioController>().ExitBattle();
-        }
-
-        private void OnDestroy()
-        {
-            Instance = null;
         }
     }
 }

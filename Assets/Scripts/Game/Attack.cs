@@ -2,6 +2,10 @@
 
 namespace Game
 {
+    /// <summary>
+    /// Abstract definition of an Attack
+    /// with an attached Action Command.
+    /// </summary>
     public abstract class Attack : MonoBehaviour
     {
         public string Name;

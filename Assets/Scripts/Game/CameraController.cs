@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game
 {
-    public class CameraGroup : MonoBehaviour
+    /// <summary>
+    /// Provides easy ways to lock onto and
+    /// follow the player, as well as complete the
+    /// transition from field to battle mode.
+    /// </summary>
+    public class CameraController : MonoBehaviour
     {
-        public CameraHelper MainCamera;
-        public CameraHelper EntityCamera;
-        public GameObject Plyr;
+        public GameObject player;
 
         public bool Following
         {
@@ -39,7 +43,7 @@ namespace Game
             if (Following)
             {
                 transform.position = Vector3.SmoothDamp(transform.position,
-                    Plyr.transform.position + (Vector3.up * Constants.CameraDistance), ref _velocity,
+                    player.transform.position + (Vector3.up * Constants.CameraDistance), ref _velocity,
                     Constants.CameraSlowness);
                 transform.rotation = Quaternion.Slerp(transform.rotation, _originalRotation, Time.deltaTime * Constants.LerpTransitionSpeed);
             }
@@ -51,6 +55,11 @@ namespace Game
             }
         }
 
+        /// <summary>
+        /// Given the two battling, transitions the camera to point at them.
+        /// </summary>
+        /// <param name="player">The player (on the left)</param>
+        /// <param name="enemy">The enemy (on the right)</param>
         public void Battle(Entity player, Entity enemy)
         {
             Following = false;

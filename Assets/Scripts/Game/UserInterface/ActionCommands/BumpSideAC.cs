@@ -6,6 +6,11 @@ using Random = System.Random;
 
 namespace Game.UserInterface.ActionCommands
 {
+    /// <summary>
+    /// Defines the action command for a side bump,
+    /// which involves quickly clicking the left/right/up/down
+    /// arrow key.
+    /// </summary>
     public class BumpSideAC : ActionCommand
     {
         private bool _shown;

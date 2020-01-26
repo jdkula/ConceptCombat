@@ -2,6 +2,10 @@
 
 namespace Game.Attacks
 {
+    /// <summary>
+    /// Represents the "light beam" attack
+    /// the player can use
+    /// </summary>
     public class LightBeam : Attack
     {
         protected new void Awake()
@@ -11,7 +15,7 @@ namespace Game.Attacks
             ActionCommandName = "Light Beam AC";
             Damage = 20;
             Accuracy = 0.7f;
-            Uses = Int32.MaxValue;
+            Uses = 20;
             base.Awake();
         }
     }
