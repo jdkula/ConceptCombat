@@ -2,41 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4b4056f-df13-4418-9c02-cb94644651b4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Concept Combat/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Concept Combat/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Concept Combat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Concept Combat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/ActionCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/ActionCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/LightBeam.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/LightBeam.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/SideBump.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/SideBump.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/AudioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Block.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Block.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CameraGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CameraGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CameraController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CameraHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/CameraHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/DebugHelp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/DebugHelp.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Entity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Floor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Floor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music/30 (Experimental OST) Crystal Exp.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music/30 (Experimental OST) Crystal Exp.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music/enemy-retreating-1.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Music/enemy-retreating-1.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cameras.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cameras.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Game Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Game Manager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SkullEnemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SkullEnemy.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/block_A.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/block_A.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/block_B.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SFX/block_B.wav.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Skull.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Skull.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/BumpSideAC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/BumpSideAC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/LightBeamAC.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/LightBeamAC.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Block block-1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Block block-1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BoyBack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BoyBack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BoyFront.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BoyFront.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/BoySide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/BoySide.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Door.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Door.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Ground.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Ground.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUDHP.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUDHP.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUDMini.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUDMini.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUDMini_Enemy.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUDMini_Enemy.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/HUDXP.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/HUDXP.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Skull.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Skull.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Time.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Time.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scenes/Dungeon.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scenes/Dungeon.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +29,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Sprites/BoyBack.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Entity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Floor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sprites/Block block-1.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Attack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Skull.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sprites/BoySide.png.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CameraHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/AudioController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sprites/BoyFront.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/PlayAction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,8 +49,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Constants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/LightBeamAC.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/BumpSideAC.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/BattleMenus/AttackInfoMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/BattleMenus/AttackMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/EnemyUserInterface.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Doxyfile.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/HUD.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/UserInterface.cs" root0="FORCE_HIGHLIGHTING" />
@@ -70,11 +60,14 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD9BEDA1-AB32-47EE-B473-0364A1BA4085/6b/e9e05092/Quaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Attacks/LightBeam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Attacks/SideBump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Platform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/RiderPlugin.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/DebugHelp.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Direction.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/SuccessIndicator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
@@ -82,6 +75,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ActionCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Scenes/Dungeon.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/Block.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sprites/HUDMini_Enemy.png.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -91,7 +85,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/SideBump.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Attacks/LightBeam.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/BumpSideAC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/LightBeamAC.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/AudioController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Block.cs" />
@@ -104,8 +97,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Door.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Entity.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Floor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Skull.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/UserInterface/ActionCommands/BumpSideAC.cs" />
       </list>
     </option>
   </component>
@@ -134,10 +128,10 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35471">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="35471" />
       <method v="2" />
     </configuration>
   </component>
@@ -169,7 +163,8 @@
       <workItem from="1557478254480" duration="122000" />
       <workItem from="1557478524338" duration="309000" />
       <workItem from="1557627577431" duration="818000" />
-      <workItem from="1579998527547" duration="2120000" />
+      <workItem from="1579998527547" duration="2295000" />
+      <workItem from="1580002963035" duration="1296000" />
     </task>
     <task id="LOCAL-00001" summary="Remember when I said I might revisit this idea sometime? Maybe now is that time :)">
       <created>1557478796038</created>
@@ -178,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557478796038</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="A little, tiny bit of code cleanup/commenting. Boy, this code base is very old.">
+      <created>1580000800498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580000800498</updated>
+    </task>
+    <task id="LOCAL-00003" summary="A little, tiny bit of code cleanup/commenting. Boy, this code base is very old.">
+      <created>1580000812319</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580000812319</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +200,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -199,17 +210,102 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Remember when I said I might revisit this idea sometime? Maybe now is that time :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remember when I said I might revisit this idea sometime? Maybe now is that time :)" />
+    <MESSAGE value="A little, tiny bit of code cleanup/commenting. Boy, this code base is very old." />
+    <option name="LAST_COMMIT_MESSAGE" value="A little, tiny bit of code cleanup/commenting. Boy, this code base is very old." />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1750" height="373" key="GridCell.Tab.0.bottom" timestamp="1580004316621">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.0.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316621" />
+    <state width="1750" height="373" key="GridCell.Tab.0.bottom/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462973" />
+    <state width="1750" height="373" key="GridCell.Tab.0.center" timestamp="1580004316620">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.0.center/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316620" />
+    <state width="1750" height="373" key="GridCell.Tab.0.center/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462972" />
+    <state width="1750" height="373" key="GridCell.Tab.0.left" timestamp="1580004316620">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.0.left/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316620" />
+    <state width="1750" height="373" key="GridCell.Tab.0.left/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462971" />
+    <state width="1750" height="373" key="GridCell.Tab.0.right" timestamp="1580004316620">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.0.right/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316620" />
+    <state width="1750" height="373" key="GridCell.Tab.0.right/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462972" />
+    <state width="1750" height="373" key="GridCell.Tab.1.bottom" timestamp="1580004316543">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.1.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316543" />
+    <state width="1750" height="373" key="GridCell.Tab.1.bottom/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462868" />
+    <state width="1750" height="373" key="GridCell.Tab.1.center" timestamp="1580004316542">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.1.center/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316542" />
+    <state width="1750" height="373" key="GridCell.Tab.1.center/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462867" />
+    <state width="1750" height="373" key="GridCell.Tab.1.left" timestamp="1580004316542">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.1.left/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316542" />
+    <state width="1750" height="373" key="GridCell.Tab.1.left/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462867" />
+    <state width="1750" height="373" key="GridCell.Tab.1.right" timestamp="1580004316542">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.1.right/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316542" />
+    <state width="1750" height="373" key="GridCell.Tab.1.right/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462868" />
+    <state width="1750" height="373" key="GridCell.Tab.2.bottom" timestamp="1580004316543">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.2.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316543" />
+    <state width="1750" height="373" key="GridCell.Tab.2.bottom/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462871" />
+    <state width="1750" height="373" key="GridCell.Tab.2.center" timestamp="1580004316543">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.2.center/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316543" />
+    <state width="1750" height="373" key="GridCell.Tab.2.center/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462869" />
+    <state width="1750" height="373" key="GridCell.Tab.2.left" timestamp="1580004316543">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.2.left/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316543" />
+    <state width="1750" height="373" key="GridCell.Tab.2.left/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462869" />
+    <state width="1750" height="373" key="GridCell.Tab.2.right" timestamp="1580004316543">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.2.right/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316543" />
+    <state width="1750" height="373" key="GridCell.Tab.2.right/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462870" />
+    <state width="1750" height="373" key="GridCell.Tab.3.bottom" timestamp="1580004316544">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.3.bottom/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316544" />
+    <state width="1750" height="373" key="GridCell.Tab.3.bottom/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462873" />
+    <state width="1750" height="373" key="GridCell.Tab.3.center" timestamp="1580004316544">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.3.center/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316544" />
+    <state width="1750" height="373" key="GridCell.Tab.3.center/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462872" />
+    <state width="1750" height="373" key="GridCell.Tab.3.left" timestamp="1580004316543">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.3.left/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316543" />
+    <state width="1750" height="373" key="GridCell.Tab.3.left/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462871" />
+    <state width="1750" height="373" key="GridCell.Tab.3.right" timestamp="1580004316544">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state width="1750" height="373" key="GridCell.Tab.3.right/0.23.1792.1097@0.23.1792.1097" timestamp="1580004316544" />
+    <state width="1750" height="373" key="GridCell.Tab.3.right/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580003462872" />
+    <state x="496" y="311" key="Vcs.Push.Dialog.v2" timestamp="1580000816297">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="496" y="311" key="Vcs.Push.Dialog.v2/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580000816297" />
     <state x="627" y="312" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1580000702852">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="627" y="312" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580000702852" />
-    <state x="495" y="207" width="837" height="729" key="find.popup" timestamp="1580000651912">
+    <state x="495" y="207" width="837" height="729" key="find.popup" timestamp="1580002984817">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state x="495" y="207" width="837" height="729" key="find.popup/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580000651912" />
+    <state x="495" y="207" width="837" height="729" key="find.popup/1792.23.1920.1057/0.23.1792.1097@0.23.1792.1097" timestamp="1580002984817" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -218,30 +314,13 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/Player.cs</url>
-          <line>54</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Game/Player.cs" initialLine="53">
-            <startOffsets>
-              <option value="1684" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1715" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="debuggerHistoryManager">
-    <expressions id="evaluateExpression">
-      <expression>
-        <expression-string>EnemyList</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-    </expressions>
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="this._direction" language="C#" custom="RiderImportsList:" />
+        <watch expression="this._distanceThreshold" language="C#" custom="RiderImportsList:" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

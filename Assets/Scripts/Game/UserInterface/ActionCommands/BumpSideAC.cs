@@ -99,7 +99,7 @@ namespace Game.UserInterface.ActionCommands
 
         private IEnumerator Anim4()
         {
-            _targetOpacity = 255f;
+            _targetOpacity = 1f;
             Attatched.TargetPosition = GetTargetPosition(Attatched.TargetPosition, true);
             yield return new WaitForSeconds(HintDuration);
             Anim5();
@@ -115,19 +115,19 @@ namespace Game.UserInterface.ActionCommands
         {
             switch (_direction)
             {
-                case Direction.North:
+                case Direction.South:
                     return original + Quaternion.AngleAxis(90, Vector3.up) *
                            Attatched.EnemyVector.normalized * GameManager.Instance.TileDimension *
                            Constants.ActionCommandHintMagnitude * (subtract ? -1f : 1f);
-                case Direction.East:
+                case Direction.West:
                     return original + Quaternion.AngleAxis(180, Vector3.up) *
                            Attatched.EnemyVector.normalized * GameManager.Instance.TileDimension *
                            Constants.ActionCommandHintMagnitude * (subtract ? -1f : 1f);
-                case Direction.South:
+                case Direction.North:
                     return original + Quaternion.AngleAxis(270, Vector3.up) *
                            Attatched.EnemyVector.normalized * GameManager.Instance.TileDimension *
                            Constants.ActionCommandHintMagnitude * (subtract ? -1f : 1f);
-                case Direction.West:
+                case Direction.East:
                     return original + Quaternion.AngleAxis(0, Vector3.up) *
                            Attatched.EnemyVector.normalized * GameManager.Instance.TileDimension *
                            Constants.ActionCommandHintMagnitude * (subtract ? -1f : 1f);
@@ -154,20 +154,20 @@ namespace Game.UserInterface.ActionCommands
                         switch (_direction)
                         {
                             case Direction.South:
-                                correctDirection = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.S);
-                                break;
-                            case Direction.West:
-                                correctDirection = Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D);
-                                break;
-                            case Direction.North:
                                 correctDirection = Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S);
                                 break;
                             case Direction.East:
+                                correctDirection = Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D);
+                                break;
+                            case Direction.North:
+                                correctDirection = Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W);
+                                break;
+                            case Direction.West:
                                 correctDirection = Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A);
                                 break;
                         }
                         if ((correctDirection && (Attatched.transform.position - Attatched.CurrentEnemy.TargetPosition)
-                             .magnitude < _distanceThreshold) && !_animFinished)
+                             .magnitude > _distanceThreshold) && !_animFinished)
                             Succeed();
                         else
                             Fail();

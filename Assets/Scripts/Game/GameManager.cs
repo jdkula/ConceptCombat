@@ -36,12 +36,11 @@ namespace Game
         {
             Application.targetFrameRate = 60;
             Instance = this;
-
-            _generateLevel();
         }
 
         void Start()
         {
+            _generateLevel();
             StartCoroutine(WaitCamera(_camController));
         }
 

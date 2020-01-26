@@ -8,3 +8,5 @@ inspired by Paper Mario. I may come back to this idea at some point...
 This was basically my first real try at using Unity, and it definetly looks like it. I'm keeping
 it around because I may want to come back to this idea at some point, but I'll probably end up
 re-engineering it with my now-better understanding of Unity.
+
+A few of the sound effects are from Undertale.
